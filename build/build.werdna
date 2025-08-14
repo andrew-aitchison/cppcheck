@@ -13,4 +13,4 @@ cmake -DUSE_QT6=ON -DBUILD_GUI=ON -DHAVE_RULES=ON ..
 
 cmake --build . -v
 
-make -j#(nproc) -l3.1 install
+make -j$(nproc) -l3.1 install
