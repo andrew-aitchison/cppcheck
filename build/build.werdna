@@ -1,0 +1,16 @@
+#!/bin/bash
+
+module load use.own
+module remove gcc
+module load llvm-21
+
+cd /home/werdna/src/cppcheck/cppcheck
+mkdir -p build
+cd build
+
+cmake -DUSE_QT6=ON -DBUILD_GUI=ON -DHAVE_RULES=ON ..
+# -DUSE_MATCHCOMPILER=ON
+
+cmake --build . -v
+
+make -j#(nproc) -l3.1 install
