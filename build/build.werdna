@@ -2,7 +2,7 @@
 
 module load use.own
 module remove gcc
-module load llvm-21
+module load llvm
 
 cd /home/werdna/src/cppcheck/cppcheck
 mkdir -p build
@@ -14,3 +14,4 @@ cmake -DUSE_QT6=ON -DBUILD_GUI=ON -DHAVE_RULES=ON ..
 cmake --build . -v
 
 make -j$(nproc) -l3.1 install
+
