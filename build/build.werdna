@@ -11,7 +11,8 @@ cd build
 mv CMakeCache.txt CMakeCache.txt.$(date +%F).$$
 export FILESDIR=/usr/local/share/Cppcheck
 
-cmake -DUSE_QT6=ON -DBUILD_GUI=ON -DHAVE_RULES=ON ..
+cmake -DBUILD_GUI=ON -DHAVE_RULES=ON ..
+# -DUSE_QT6=ON
 # -DUSE_MATCHCOMPILER=ON
 
 cmake --build . -v
