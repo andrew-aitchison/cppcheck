@@ -110,6 +110,8 @@ id_MTunsafe_full = {
     'cuserid',
     'drand48',
     'ecvt',
+    'elf_fill',
+    'elf_flagelf',
     'encrypt',
     'endfsent',
     'endgrent',
