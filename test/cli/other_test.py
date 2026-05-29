@@ -457,9 +457,9 @@ def test_addon_threadsafety(tmpdir):
     test_file = os.path.join(tmpdir, 'test.cpp')
     with open(test_file, 'wt') as f:
         f.write("""
-extern const char* f()
+extern void f()
 {
-    return strerror(1);
+    elf_fill(1);
 }
         """)
 
