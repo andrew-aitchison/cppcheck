@@ -496,7 +496,7 @@ extern const char* f()
     assert lines == [
         'Checking {} ...'.format(test_file)
     ]
-    assert stderr == '{}:4:12: warning: strerror is MT-unsafe [threadsafety-unsafe-call]\n'.format(test_file)
+    assert stderr == '{}:4:12: warning: elf_fill is MT-unsafe [threadsafety-unsafe-call]\n'.format(test_file)
 
 
 def test_addon_naming(tmpdir):
