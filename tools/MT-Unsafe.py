@@ -84,9 +84,8 @@ def man_search(manpage):
 
     apis = set()
     for lineread in MANPAGE:
-        lineread = str(lineread) #.strip()
+        lineread = str(lineread)
         dprint(1, '%s' % (lineread))
-
         if 'MT-Safe' in lineread:
             vprint(1, 'clearing MT-Safe %s', lineread)
             apis.clear()
@@ -108,7 +107,7 @@ def man_search(manpage):
                     apis.add(fn)
 
         if 'MT-Unsafe' in lineread:
-            resUnsafe = re.search("MT-Unsafe\\s+(.*)(\\n\'|$)" , lineread)
+            resUnsafe = re.search("MT-Unsafe\\s+(.*)(\\n\'|$)", lineread)
 
             if resUnsafe:
                 values = resUnsafe.group(1)
